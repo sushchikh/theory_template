@@ -61,11 +61,11 @@ window.onscroll = function(){
 };
 
 function addShowClass(){
-    
+    // while(i < myArray.length){
         myArray[i].classList.add('show');
         i++;
         timeDelay =+ 200;  
-    
+    // };
 };
 
 
