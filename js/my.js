@@ -1,3 +1,16 @@
+var  myScroll = window.pageYOffset || document.documentElement.scrollTop;
+var featureTrigger = document.getElementById('featureTrigger');
+var featuresContainer = getElementById('features_container');
+// console.log(featureTrigger);
+window.onscroll = function() {
+if (myScroll > featureTrigger.getBoundingClientRect().top){
+    featuresContainer.classList.add('show');
+};
+};
+
+
+
+
 $(document).ready(function(){
 
 
