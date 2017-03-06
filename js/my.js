@@ -45,23 +45,28 @@ $(window).scroll(function(){
 
 	var wScroll = $(this).scrollTop();
 
-	if (wScroll > $('.header_title').offset().top){
+	if (wScroll > $('.header_nav').offset().top){
 		$('.features_element').addClass('show');
 	}
-    else {
-        	$('.features_element').removeClass('show');
-    }
-
-
-
-    // if (wScroll > $('.how_container_title').offset().top){
-    //     $('.number').each(function(i) {
-
-    //         setTimeout(function(){
-    //             $('.number').eq(i).addClass('show');           
-    //         }, 100 * (i+1));
-    //     });
+    // else {
+    //     	$('.features_element').removeClass('show');
     // }
+
+
+    // var wScroll = $(this).scrollTop();
+
+    // if (wScroll > $('.features_container').offset().top){
+    //     $('.peolpe_element').addClass('show');
+    // }
+
+
+    if (wScroll > $('.features_container').offset().top){
+        $('.peolpe_element').each(function(i) {
+            setTimeout(function(){
+                $('.peolpe_element').eq(i).addClass('show');           
+            }, 100 * (i+1));
+        });
+    }
 
 });
 

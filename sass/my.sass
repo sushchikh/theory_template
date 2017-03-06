@@ -211,6 +211,7 @@ body
 	opacity: 0
 	transform: translateY(100px)
 	transition: all .3s ease
+
 	@media only screen and (max-width: 500px)
 		padding: 20px 3px 3px
 
@@ -289,6 +290,17 @@ body
 		margin: 5px 0px
 		padding-left: 10px
 		padding-right: 10px
+
+.advantages_element_img
+	width: 500px
+	height: 170px
+	overflow: hidden
+	@media only screen and (max-width: 550px)
+		width: auto
+	img
+		transition: transform .5s ease
+		&:hover
+			transform: scale(1.15)
 
 .advantages_element_text
 	@media only screen and (max-width: 560px)
