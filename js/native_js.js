@@ -64,7 +64,7 @@ window.onscroll = function(){
 function addShowClass() {
   var i = 0;
   var timerId = setTimeout(function go() {
-    if (i < myArray.length-1) setTimeout(go, 250);
+    if (i < myArray.length-1) setTimeout(go, 200);
     myArray[i].classList.add('show');
     i++;
   }, 100);
