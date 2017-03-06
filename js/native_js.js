@@ -47,26 +47,28 @@
 
 var myScroll = window.pageYOffset || document.documentElement.scrollTop;
 var featureTrigger = document.getElementById('featureTrigger');
-var timeDelay = 0;
+
 var myArray = [];
-var i = 0;
+
 myArray[0] = document.getElementById('features_container').firstElementChild;
 myArray[1] = document.getElementById('features_container').firstElementChild.nextElementSibling;
 myArray[2] = document.getElementById('features_container').lastElementChild;
 
 window.onscroll = function(){
-        if (myScroll > featureTrigger.getBoundingClientRect().top){
-            window.setInteraval(addShowClass(), timeDelay);
-        };
+    if (myScroll > featureTrigger.getBoundingClientRect().top){
+        addShowClass();
+    	window.onscroll = null;
+    };
 };
 
-function addShowClass(){
-    // while(i < myArray.length){
-        myArray[i].classList.add('show');
-        i++;
-        timeDelay =+ 200;  
-    // };
-};
+function addShowClass() {
+  var i = 0;
+  var timerId = setTimeout(function go() {
+    if (i < myArray.length-1) setTimeout(go, 250);
+    myArray[i].classList.add('show');
+    i++;
+  }, 100);
+}
 
 
 
